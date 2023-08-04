@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/userDetails.css">
+  
+</head>
+<body onload="loadData()">
+  <div class="container">
+    <h2>Product Details</h2>
+    <form action="">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="id">Product ID</label>
+          </div>
+          <div class="col-md-6">
+            <h6 id="id"></h6>
+            <!-- <input type="text" disabled id="id" name=""> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="name">Name</label>
+          </div>
+          <div class="col-md-6" id="=nameDiv">
+            <h6 id="name"></h6>
+            <!-- <input type="text" id="name" disabled name=""> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="desc">Product Description</label>
+          </div>
+          <div class="col-md-6">
+            <span id="desc"></span>
+            <!-- <input type="text" id="desc" disabled name=""> -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="price">Price</label>
+          </div>
+          <div class="col-md-6">
+            <span id="price"></span>
+            <!-- <input type="text" disabled id="price" name=""> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row mt-2 rounded-5">
+      <div class="col-md-6">
+        <input type="button" value="Edit " id="editButton" class="mx-2" onclick="editData()">
+        <input type="button" value="Delete" id="deleteButton" class="mx-1" onclick="deleteData()">
+      </div>
+      <div class="col-md-6" id="address">
+      </div>
+    </div>
+    <div class="row mt-0 rounded-5">
+      <div class="col-md-6" id="saveCancel">
+        <input type="button" class="hide" id="saveButton" value="Save " class="mx-1" onclick="saveChange()" >
+        <input type="button" class="hide" id="cancelButton" value="Cancel " class="mx-1" onclick="cancelChange()">
+      </div>
+      <div class="col-md-6" id="address">
+      </div>
+    </div> -->
+    <!-- <h5 id="response">  </h5> -->
+  </form>
+  </div>
+  <!-- Add Bootstrap JS scripts at the end of the body tag for better page loading -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../js/productDetails.js"></script>
+</body>
+</html>

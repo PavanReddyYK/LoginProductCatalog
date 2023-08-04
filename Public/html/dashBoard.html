@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashBoard</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body onload="fetchUsers()">
+    <div class="container mt-4">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="consumer-tab"
+            data-toggle="tab"
+            href="#consumer"
+            role="tab"
+            aria-controls="consumer"
+            aria-selected="true"
+            >Consumer</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="admin-tab"
+            data-toggle="tab"
+            href="#admin"
+            role="tab"
+            aria-controls="admin"
+            aria-selected="false"
+            >Admin</a
+          >
+        </li>
+      </ul>
+
+      <div class="tab-content mt-3" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="consumer"
+          role="tabpanel"
+          aria-labelledby="consumer-tab"
+        >
+          <h2>Consumer Data</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody id="consumerData">
+              <!-- Add consumer data rows here -->
+              
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="admin"
+          role="tabpanel"
+          aria-labelledby="admin-tab"
+        >
+          <h2>Admin Data</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody id="adminData">
+                <!-- Add consumer data rows here -->
+                
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/dashBoard.js"></script>
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body onload="fetchProducts()">
+  <div class="container mt-4">
+    <h2>Products</h2>
+    <table class="table  table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="productsData">
+        <!-- Add user data rows here -->
+        <!-- <tr><td>'+data[i].user_name + '</td><td><input type="button" name="" id="button" value="View" onclick="displayUser('+ data[i].user_id +')"/></td></tr> -->
+        <!-- <tr><td>Pavan</td><td><button class="btn btn-primary" onclick="viewUser('Pavan')">View</button></td></tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../js/products.js"></script>
+  <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+</html>
