@@ -47,7 +47,6 @@ const  login = (req,res)=>{
         }
         else
         {
-            // console.log("invalid credentials")
             res.render('index.html');
         }
     })
@@ -103,7 +102,6 @@ const fetchData = (req,res)=>{
                         outer_condition : '1=1'
                     }
                     helper.selectData(data,(result)=>{
-                        // console.log(result)
                         res.send(result);
                     })
                 }else if(userType=='consumer')
@@ -114,7 +112,6 @@ const fetchData = (req,res)=>{
                         outer_condition : '1=1'
                     }
                     helper.selectData(data,(result)=>{
-                        // console.log(result)
                         res.json(result);
                     })
                 }
@@ -141,7 +138,6 @@ const displayData= (req,res)=>
     helper.getData(sessionData,(result)=>{
         if(result.length==1)
         {
-            console.log(result[0]);
             if(result[0].user_type=='admin')
             {
                 res.render('userDetails.html')
@@ -158,7 +154,6 @@ const showData=(req,res)=>
 {
     const uORpID = req.body.id;
     const sid = req.body.sessionid;
-    // let sid=sessionStorage.getItem('sid');   // cant user sessionStorage in backEnd/server
 
     const sessionData = {
         outer_select    : 'user_type',
@@ -172,10 +167,8 @@ const showData=(req,res)=>
     {
         if(result.length==1)
         {
-            console.log(result[0]);
             if(result[0].user_type=='admin')
             {
-                // res.json(result[0])
                 const userArguments ={
                     outer_select : 'user_name, user_phone, user_id, user_address',
                     outer_table : 'user_info',
@@ -183,7 +176,6 @@ const showData=(req,res)=>
                 }
 
                 helper.selectData(userArguments,(result)=>{
-                    // console.log(result)
                     if(result.length==1){
                         res.json(result[0])
                     }
@@ -195,8 +187,6 @@ const showData=(req,res)=>
             }
             else if(result[0].user_type=='consumer')
             {
-                // console.log("consumer22 broo");
-                // res.json(result[0])
                 const userArguments ={
                     outer_select : 'product_name, product_desc, product_id, product_price',
                     outer_table : 'product_info',
@@ -204,7 +194,6 @@ const showData=(req,res)=>
                 }
 
                 helper.selectData(userArguments,(result)=>{
-                    // console.log(result)
                     if(result.length==1){
                         res.json(result[0])
                     }

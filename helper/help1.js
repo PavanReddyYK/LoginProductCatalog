@@ -22,14 +22,12 @@ const   selectData = (data,callBack)=>{
     const outer_condition = data.outer_condition;
 
     const select_query = `SELECT ${outer_select} FROM ${outer_table} WHERE ${outer_condition}`
-    console.log(select_query);
 
     con.query(select_query,(err,result)=>{
         if(err) {
             throw err;
         }else
         {
-            // console.log(result);
             callBack(result);          // Array Format
         }
     })
@@ -41,7 +39,6 @@ const insertData = (data,callBack) =>{
     const values = data.values;
 
     const insert_query = `INSERT INTO ${table_name} (${column_name}) VALUES (${values});`
-    console.log(insert_query);
 
     con.query(insert_query,(insert_err,insert_result)=>{
         if(insert_err){
@@ -62,7 +59,6 @@ const getData = (data,callBack)=>{
     const inner_condition = data.inner_condition;
 
     const getQuery = `SELECT ${outer_select} FROM ${outer_table} WHERE ${outer_condition} IN (SELECT ${inner_select} FROM ${inner_table} WHERE ${inner_condition});`
-    console.log(getQuery);
     
     con.query(getQuery,(Err, getResult)=>{
         if(Err){
@@ -79,7 +75,6 @@ const updateData = (data, callBack)=>{
     const condition = data.condition
 
     const select_query = `UPDATE ${table_name} SET ${columnValue} WHERE ${condition};`
-    console.log(select_query);
 
     con.query(select_query,(err,result)=>{
         console.log(result)
@@ -101,7 +96,6 @@ const deleteData = (data, callBack)=>{
     const condition = data.condition
 
     const delete_query= `DELETE FROM ${table_name} WHERE ${condition};`
-    console.log(delete_query);
 
     con.query(delete_query,(err,result)=>{
         if(!err)
