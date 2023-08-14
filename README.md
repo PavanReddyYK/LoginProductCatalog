@@ -25,6 +25,7 @@ Technologies Used:-
 Node.js, 
 Express.js, 
 MySQL(Database), 
+BootStrap, 
 HTML, CSS, and JavaScript
 
 Contributing:-
